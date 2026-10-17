@@ -1,0 +1,12 @@
+SYNTHETIC OFFLINE DEMO: no external integration or messages
+create: accepted
+start UTC: 2026-10-17T10:00:00Z
+duplicate: duplicate
+first flush: [(1, 'retry_pending')]
+retry flush: [(1, 'delivered')]
+reschedule: accepted
+old reminder time: [(3, 'delivered')]
+cancel: accepted
+after cancellation: [(5, 'delivered')]
+reminders delivered: 0
+outbox: [(1, 'calendar_upsert', 'delivered', 2), (2, 'reminder', 'invalidated', 0), (3, 'calendar_upsert', 'delivered', 1), (4, 'reminder', 'invalidated', 0), (5, 'calendar_cancel', 'delivered', 1)]
